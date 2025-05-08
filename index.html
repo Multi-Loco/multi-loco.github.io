@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media -->
+  <meta name="description"
+    content="Learning Whole-Body Loco-Manipulation for Omni-Directional Task Space Pose Tracking with a Wheeled-Quadrupedal-Manipulator">
+  <meta property="og:title" content="Wheeled-Quadrupedal-Manipulator" />
+  <meta property="og:description"
+    content="Learning Whole-Body Loco-Manipulation for Omni-Directional Task Space Pose Tracking with a Wheeled-Quadrupedal-Manipulator" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <meta property="og:image" content="static/image/teaser.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:title" content="Wheeled-Quadrupedal-Manipulator">
+  <meta name="twitter:description"
+    content="Learning Whole-Body Loco-Manipulation for Omni-Directional Task Space Pose Tracking">
+  <meta name="twitter:image" content="static/images/teaser.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="loco-manipulator, wheeled quadraped, precise tracking, reward design">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Learning Whole-Body Loco-Manipulation for Omni-Directional Task Space Pose Tracking</title>
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <!-- Fonts and Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Learning Whole-Body Loco-Manipulation for Omni-Directional Task
+              Space Pose Tracking with Wheeled-Quadrupedal-Manipulator</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Kaiwen Jiang<sup>*</sup>,</span>
+              <span class="author-block"><sup>1</sup>Zhen Fu<sup>*</sup>,</span>
+              <span class="author-block"><sup>1</sup>Junde Guo,</span>
+              <span class="author-block"><sup>1,3</sup>Wei Zhang,</span>
+              <span class="author-block"><sup>2,3</sup>Hua Chen</span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Southern University of Science and Technology,</span>
+              <span class="author-block"><sup>2</sup>Zhejiang University-University of Illinois Urbana-Champaign
+                Institute,</span>
+              <span class="author-block"><sup>3</sup>LimX Dynamics</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+            </div>
+            <div class="institution-logos">
+              <a href="https://www.sustech.edu.cn/" target="_blank">
+                <img src="./static/images/sustech.png" alt="SUSTech Logo">
+              </a>
+              <a href="https://www.wzhanglab.site/" target="_blank">
+                <img src="./static/images/clearlab.png" alt="ClearLab Logo">
+              </a>
+              <a href="https://zjui.intl.zju.edu.cn/" target="_blank">
+                <img src="./static/images/zjui2.jpg" alt="ZJUI Logo">
+              </a>
+              <a href="https://www.limxdynamics.com/" target="_blank">
+                <img src="./static/images/LimX.png" alt="LimX Logo">
+              </a>
+              
+            </div>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="http://arxiv.org/abs/2412.03012" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://www.bilibili.com/video/BV1yJBuYvEw4/?spm_id_from=333.999.0.0&vd_source=45dbbabddf51fc5827a0fed713c90afd" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <img src="static/images/bilibili.svg" alt="Bilibili" width="16" height="16" class="bilibili-icon">
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+                <!-- <span class="link-block">
+                  <a href="TODO" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="section">
+    <div class="container is-normal">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <div class="content has-text-centered">
+            <video id="wlm-revision-video" muted controls loop playsinline width="50%">
+              <source src="./static/videos/submit.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="section" style="padding: 1.5rem 1.5rem;">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-10"> 
+          <div class="video-container" style="position: relative; padding-bottom: 10%; height: 0; overflow: hidden;">
+            <iframe
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+              src="https://player.bilibili.com/player.html?aid=113646512447009&bvid=BV1yJBuYvEw4&cid=27317309253&page=1&danmaku=0&high_quality=1&show_related=0&autoplay=0"
+              scrolling="no"
+              frameborder="0"
+              sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups allow-credentials"
+              allowfullscreen="true"
+              referrerpolicy="origin"
+              allow="fullscreen"
+              crossorigin="use-credentials">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paper abstract -->
+  <section class="section" style="padding: 3rem 0; background-color: #f5f5f5;">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">In this paper</span>, we study the whole-body loco-manipulation problem using a Wheeled Quadrupedal Manipulator (WQM) platform. We focus on coordinating the floating base and robotic arm to achieve direct six-dimensional (6D) end-effector pose tracking in task space. This problem requires inherent balance among redundant degrees of freedom in whole-body motion. To address this challenge, we develop a novel Reward Fusion Module (RFM) that systematically integrates various reward terms in a nonlinear manner, accommodating the multi-stage and hierarchical nature of loco-manipulation. By combining our RFM with a teacher-student reinforcement learning paradigm, we present a complete scheme for 6D end-effector pose tracking. Extensive experiments, both in simulation and on hardware, demonstrate smooth and precise tracking performance, achieving state-of-the-art position errors below 5 cm and rotation errors under 0.1 rad.
+            </p>
+          </div>
+          <div class="columns is-centered">
+            <div class="column is-four-fifths">
+              <img src="./static/images/wlm_description.png" class="interpolation-image"
+                alt="Interpolate start reference image." style="max-width: 100%; height: auto; margin-top: 2rem;" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">Framework</h2>
+          <div class="content has-text-justified">
+            <p>
+              The following figure illustrates the training paradigm for the whole-body policy using the Reward Fusion Module. 
+              Various reward terms are integrated by RFM to generate a reasonable total reward \(R_t \in \mathbb{R}\). 
+              This reward is then utilized by the generalized advantage estimator (GAE) for Actor training and computing TD error for Critic training. 
+              The unified policy takes three inputs: the 6D target world frame command \((R,p)\) from users, 
+              latent \(\hat{z}\) encoded from privilege estimator, and proprioceptive states, 
+              outputting the whole-body action probability for PPO training.
+            </p>
+          </div>
+          <img src="./static/images/WQM_loco_mani.png" class="interpolation-image"
+            alt="Interpolate start reference image." width="1000" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-half">
+          <div class="content" style="height: 100%;">
+            <h3 class="title is-4">Whole-body 6-D Tracking</h3>
+            <p>
+              Our <i>WQM</i> platform tracks various 6-D poses with whole-body features and handles long-distance locomotion tasks.
+            </p>
+            <div class="video-container">
+              <video id="tracking-video" autoplay muted loop playsinline style="object-fit: cover;">
+                <source src="./static/videos/tracking.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="column is-half">
+          <div class="content" style="height: 100%;">
+            <h3 class="title is-4">Elevator Operation</h3>
+            <p>
+              Our <i>WQM</i> platform precisely pushes small buttons and enters elevators smoothly, demonstrating fine control.
+            </p>
+            <div class="video-container">
+              <video id="elevator-video" autoplay muted loop playsinline>
+                <source src="./static/videos/enter_elevator.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-half">
+          <div class="content" style="height: 100%;">
+            <h3 class="title is-4">Delicate Manipulation</h3>
+            <p>
+              Our <i>WQM</i> platform performs delicate operations, such as picking up cups and disposing them collectively.
+            </p>
+            <div class="video-container">
+              <video id="cups-video" autoplay muted loop playsinline>
+                <source src="./static/videos/pick_up_cups.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="column is-half">
+          <div class="content" style="height: 100%;">
+            <h3 class="title is-4">Whiteboard Writing</h3>
+            <p>
+              Our <i>WQM</i> platform writes and draws on whiteboards, including text like "SUSTech", "ZJUI", "LimX", and geometric shapes.
+            </p>
+            <div class="video-container">
+              <video id="writing-video" autoplay muted loop playsinline>
+                <source src="./static/videos/write_on_whiteboard.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-half">
+          <div class="content" style="height: 100%;">
+            <h3 class="title is-4">Outdoor Loco-Manipulation</h3>
+            <p>
+              Our <i>WQM</i> platform navigates through complex outdoor environments, managing extended loco-manipulation tasks effectively.
+            </p>
+            <div class="video-container">
+              <video id="outdoor-video" autoplay muted loop playsinline>
+                <source src="./static/videos/operating_on_grass_land.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="column is-half">
+          <div class="content" style="height: 100%;">
+            <h3 class="title is-4">Avoid Impedance</h3>
+            <p>
+              Our <i>WQM</i> platform demonstrates advanced obstacle avoidance while maintaining precise manipulation capabilities.
+            </p>
+            <div class="video-container">
+              <video id="elevator-operation-video" autoplay muted loop playsinline>
+                <source src="./static/videos/avoid_impedance.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{jiang2024learning,
+      title     = {Learning Whole-Body Loco-Manipulation for Omni-Directional Task Space Pose Tracking with Wheeled-Quadrupedal-Manipulator},
+      author    = {Jiang, Kaiwen and Fu, Zhen and Guo, Junde and Zhang, Wei and Chen, Hua},
+      journal   = {IEEE Robotics and Automation Letters},
+      year      = {2024}
+    }</code></pre>
+    </div>
+  </section>
+
+</body>
+
+</html>
