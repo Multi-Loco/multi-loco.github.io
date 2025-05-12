@@ -1,6 +1,6 @@
-# Wheeled-Quadrupedal-Manipulator Webpage
+# Multi-Loco Webpage
 
-This repository contains the project webpage for Learning Whole-Body Loco-Manipulation for Omni-Directional Task Space Pose Tracking with a Wheeled-Quadrupedal-Manipulator.
+This repository contains the project webpage for "Multi-Loco: Unifying Multi-Embodiment Legged Locomotion via Reinforcement Learning Augmented Diffusion".
 
 ## Project Structure
 ```
