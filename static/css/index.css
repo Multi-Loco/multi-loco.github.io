@@ -344,6 +344,27 @@ body {
   transform: scale(1.05);
 }
 
+/* Video loading styles */
+.video-container {
+  position: relative;
+  min-height: 200px;
+}
+
+.lazy {
+  background: #f0f0f0 url('../images/white_block.png') no-repeat center center;
+  background-size: 50px;
+}
+
+/* Add poster image fallback for videos */
+video.lazy {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+video.lazy.loaded {
+  opacity: 1;
+}
+
 @media screen and (max-width: 768px) {
   .hero .title {
     font-size: 1.8rem;
